@@ -1,0 +1,79 @@
+<!-- Hero Section -->
+<div class="container-fluid py-4 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="badge bg-warning text-dark mb-3">Descuento de apertura 50%</div>
+                <h1 class="display-5 fw-bold mb-3">SuperMarket Daily<br>Zorro Abarrotero</h1>
+                <p class="fs-5 text-muted mb-4">
+                    Conoce nuestro nuevo modelo de compras en línea<br>
+                    con entrega a domicilio conveniente.
+                </p>
+                <a routerLink="/products" class="btn btn-success btn-lg">
+                    Comprar Ahora <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img [src]="images[currentIndex()]" class="img-fluid rounded-4" alt="Producto destacado">
+                    <!-- Product Badge -->
+                    <!-- <div class="position-absolute top-0 end-0 m-4">
+                        <div class="bg-white rounded-3 shadow-sm p-3 d-inline-block">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="assets/fruit.png" alt="Kiwi" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                                <div>
+                                    <div class="fw-bold">Kiwi • 4 pcs</div>
+                                    <div class="text-success">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Delivery Badge -->
+                    <!-- <div class="position-absolute bottom-0 start-0 m-4">
+                        <div class="bg-white rounded-3 shadow-sm p-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                <span class="fw-bold">¡Entrega realizada!</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Categories -->
+<div class="container mt-5">
+    <div class="d-flex justify-content-center align-items-center mb-4">
+        <h2 class="h4 mb-0">Categorías Destacadas</h2>
+        <!-- <div class="category-nav">
+            <button class="btn btn-outline-secondary me-2 rounded-circle">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn btn-outline-secondary rounded-circle">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div> -->
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-2 col-md-3 col-6"
+            *ngFor="let category of ['Lácteos y Huevos', 'Snacks', 'Panadería', 'Comida Instantánea', 'Té y Café', 'Arroz y Granos']">
+            <div class="card border-0 text-center category-card h-100">
+                <div class="card-body">
+                    <div class="category-icon mb-3">
+                        <i class="bi bi-basket2-fill text-success fs-1"></i>
+                    </div>
+                    <h6 class="card-title mb-0">{{category}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

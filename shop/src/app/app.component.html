@@ -1,0 +1,62 @@
+<div class="alert alert-light border-bottom mb-0 py-2">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="text-muted small">Super Value Deals - Ahorra más con cupones</div>
+      </div>
+      <div class="col-auto">
+        <select class="form-select form-select-sm">
+          <option>Español</option>
+          <option>English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" routerLink="/">
+      <i class="bi bi-cart3"></i> Zorro Abarrotero
+    </a>
+    
+    <div class="d-flex flex-grow-1 mx-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar productos...">
+        <button class="btn btn-success" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">
+            <i class="bi bi-grid"></i> Productos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping">
+            <i class="bi bi-cart2"></i>
+            <span class="badge bg-success rounded-pill ms-1">{{countItems()}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account">
+            <i class="bi bi-person"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-4">
+  <router-outlet></router-outlet>
+</div>

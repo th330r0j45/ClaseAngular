@@ -1,0 +1,46 @@
+<div class="fullscreen-card">
+  <mat-card>
+    <mat-card-header style="padding: 16px;" class="br-0">
+      <!-- <mat-card-title class="cardtitle">Dog Table</mat-card-title> -->
+      <button mat-raised-button class="action-button" routerLink="/add">
+        <mat-icon>pets</mat-icon>
+        Agregar Perrito
+      </button>
+
+    </mat-card-header>
+    <mat-card-content class="cardbody">
+      <table>
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Raza</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(dog of dogs();track $index
+          ) {
+          <tr>
+            <td><img [src]="dog.urlImage" alt="{{ dog.breed }}" class="dog-image"></td>
+            <td>{{ dog.breed }}</td>
+            <td>{{ dog.description }}</td>
+            <td>
+              <button mat-icon-button (click)="editDog(dog)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button (click)="deleteDog(dog.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <!-- <button mat-icon-button (click)="deleteDog(dog.id)">
+                    <mat-icon>pencil</mat-icon>
+                  </button> -->
+            </td>
+          </tr>
+
+          }
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

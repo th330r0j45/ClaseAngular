@@ -1,0 +1,26 @@
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+mat-card {
+  height: 90%;
+  padding: 100px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.full-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  background-color: black;
+  opacity: 0.85;
+  border-radius: 0px;
+  /* padding: 2rem;
+    margin: 1rem; */
+}
